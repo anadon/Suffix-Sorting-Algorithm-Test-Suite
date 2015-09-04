@@ -1,0 +1,5 @@
+This is to simulate a program which reads in the sequence and does 
+nothing with it.  This is important because it can be used to subtract
+what time overhead and space overhead exists for other algorithms so 
+that they may be better compared.
+
