@@ -26,3 +26,6 @@
 [submodule "implementations/karkkainen-sanders"]
 	path = implementations/karkkainen-sanders
 	url = https://github.com/anadon/Karkkainen-Sanders
+[submodule "implementations/libsuffixarray"]
+	path = implementations/libsuffixarray
+	url = https://github.com/anadon/libsuffixarray
