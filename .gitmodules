@@ -14,3 +14,15 @@
 [submodule "implementations/archon4"]
 	path = implementations/archon4
 	url = https://github.com/anadon/archon4
+[submodule "implementations/bpr2_auto"]
+	path = implementations/bpr2_auto
+	url = https://github.com/anadon/BPR2
+[submodule "implementations/dummyProgram"]
+	path = implementations/dummyProgram
+	url = https://github.com/anadon/dummySuffixSort
+[submodule "implementations/squfsort"]
+	path = implementations/squfsort
+	url = https://github.com/anadon/QSufSort
+[submodule "implementations/karkkainen-sanders"]
+	path = implementations/karkkainen-sanders
+	url = https://github.com/anadon/Karkkainen-Sanders
