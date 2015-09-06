@@ -40,6 +40,7 @@ all : ARCHON DUMMY LIBSUFFIXARRAY QSUFSORT SAIS # BPR2 CPM03_VAR DIVSUFSORT
 
 ARCHON :
 	cd $(ARCHON) ;\
+	git pull ;\
 	make ;\
 	mv suftest ../../bin/archon4 ;\
 	cd ../
@@ -48,6 +49,7 @@ ARCHON :
 #Original build is broken
 BPR2 :
 	cd $(BPR2) ;\
+	git pull ;\
 	./bootstrap.sh ;\
 	./configure ;\
 	make ;\
@@ -56,11 +58,13 @@ BPR2 :
 #Original build is broken
 CPM03_VAR :
 	cd $(CPM03_VAR) ;\
-	 make ;\
-	 cd ../
+	git pull ;\
+	make ;\
+	cd ../
 
 DUMMY :
 	cd $(DUMMY) ;\
+	git pull ;\
 	make ;\
 	mv dummy ../../bin/dummy ;\
 	cd ../
@@ -68,18 +72,21 @@ DUMMY :
 #Original build is broken
 DIVSUFSORT :
 	cd $(DIVSUFSORT) ;\
+	git pull ;\
 	cmake CMakeLists.txt ;\
 	make ;\
 	cd ../
 
 LIBSUFFIXARRAY :
 	cd $(LIBSUFFIXARRAY) ;\
+	git pull ;\
 	make debug ;\
 	mv test/fastTime ../../bin/libsuffixarray ;\
 	cd ../
 
 QSUFSORT :
 	cd $(QSUFSORT) ;\
+	git pull ;\
 	make ;\
 	mv qsufsort ../../bin/qsufsort ;\
 	cd ../
@@ -87,6 +94,7 @@ QSUFSORT :
 
 SAIS :
 	cd $(SAIS) ;\
+	git pull ;\
 	make ;\
 	mv suftest ../../bin/sais ;\
 	cd ../
