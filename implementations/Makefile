@@ -19,7 +19,7 @@
 
 ##PASS OFF BUILDS TO RESPECTIVE IMPLEMENTATIONS########################
 
-ARCHON = archon3
+ARCHON = archon4
 
 BPR2 = bpr2_auto
 
@@ -35,50 +35,63 @@ QSUFSORT = qsufsort
 
 SAIS = sais-lite-2.4.1
 
-all : ARCHON BPR2 CPM03_VAR DUMMY DIVSUFSORT LIBSUFFIXARRAY QSUFSORT SAIS
+all : ARCHON DUMMY LIBSUFFIXARRAY QSUFSORT SAIS # BPR2 CPM03_VAR DIVSUFSORT
+	
 
 ARCHON :
-	cd $(ARCHON) \
-	make \
-	mv archon3 ..
-	 cd ../
+	cd $(ARCHON) ;\
+	make ;\
+	mv suftest ../../bin/archon4 ;\
+	cd ../
 	
 
 #Original build is broken
 BPR2 :
-	cd $(BPR2) \
-	./bootstrap.sh \
-	./configure \
-	make \
+	cd $(BPR2) ;\
+	./bootstrap.sh ;\
+	./configure ;\
+	make ;\
 	cd ../
 
 #Original build is broken
 CPM03_VAR :
-	cd $(CPM03_VAR) ; make ; cd ../
+	cd $(CPM03_VAR) ;\
+	 make ;\
+	 cd ../
 
 DUMMY :
-	cd $(DUMMY) ; make ; cd ../
+	cd $(DUMMY) ;\
+	make ;\
+	mv dummy ../../bin/dummy ;\
+	cd ../
 
 #Original build is broken
 DIVSUFSORT :
-	cd $(DIVSUFSORT) ; cmake CMakeLists.txt ; make ; cd ../
-
+	cd $(DIVSUFSORT) ;\
+	cmake CMakeLists.txt ;\
+	make ;\
+	cd ../
 
 LIBSUFFIXARRAY :
-	cd $(LIBSUFFIXARRAY) ; make ; cd ../
+	cd $(LIBSUFFIXARRAY) ;\
+	make debug ;\
+	mv test/fastTime ../../bin/libsuffixarray ;\
+	cd ../
 
 QSUFSORT :
-	cd $(QSUFSORT) ; make ; cd ../
+	cd $(QSUFSORT) ;\
+	make ;\
+	mv qsufsort ../../bin/qsufsort ;\
+	cd ../
 
 
 SAIS :
-	cd $(SAIS) \
-	make \
-	mv suftest .. \
+	cd $(SAIS) ;\
+	make ;\
+	mv suftest ../../bin/sais ;\
 	cd ../
 
 
 clean :
-	for i in $$(ls -d */ ) ; do cd $$i ; make clean ; cd .. ; done
-	cd libdivsufsort ; make clean ; git checkout -- . ; git clean -f
+	for i in $$(ls -d */ ) ; do cd $$i ; make clean ; git checkout -- . ; git clean -f ; cd .. ; done
 	
