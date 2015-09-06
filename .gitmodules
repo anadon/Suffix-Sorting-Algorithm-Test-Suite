@@ -1,38 +1,10 @@
-[submodule "archon4"]
-	path = implementations/archon4
-	url = https://github.com/anadon/archon4
-
-[submodule "BPR2"]
-        path = implementations/bpr2_auto
-        url = https://github.com/anadon/BPR2
-
-[submodule "CPM03"]
-        path = implementations/CPM03
-        url = https://github.com/anadon/CPM03
-
-[submodule "dummy"]
-        path = implementations/dummyProgram
-        url = https://github.com/anadon/dummySuffixSort
-
-[submodule "Karkkainen-Sanders"]
-        path = implementations/karkkainen-sanders
-        url = https://github.com/anadon/Karkkainen-Sanders
-
-[submodule "libdivsufsort2"]
-        path = implementations/libdivsufsort2
-        url = https://github.com/y-256/libdivsufsort
-
-[submodule "libsuffixarray"]
-        path = implementations/libsuffixarray
-        url = https://github.com/anadon/libsuffixarray
-
-[submodule "QSufSort"]
-        path = implementations/qsufsort
-        url = https://github.com/anadon/QSufSort
-
 [submodule "implementations/sais-lite-2.4.1"]
 	path = implementations/sais-lite-2.4.1
 	url = https://github.com/anadon/SA-IS
 [submodule "implementations/CPM03"]
 	path = implementations/CPM03
 	url = https://github.com/anadon/CPM03
+[submodule "implementations/libdivsufsort"]
+        path = implementations/libdivsufsort
+        url = https://github.com/y-256/libdivsufsort
+
