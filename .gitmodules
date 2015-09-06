@@ -8,3 +8,6 @@
         path = implementations/libdivsufsort
         url = https://github.com/y-256/libdivsufsort
 
+[submodule "implementations/libdivsufsort2"]
+	path = implementations/libdivsufsort2
+	url = https://github.com/y-256/libdivsufsort
