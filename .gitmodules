@@ -20,12 +20,12 @@
 [submodule "implementations/dummyProgram"]
 	path = implementations/dummyProgram
 	url = https://github.com/anadon/dummySuffixSort
-[submodule "implementations/squfsort"]
-	path = implementations/squfsort
-	url = https://github.com/anadon/QSufSort
 [submodule "implementations/karkkainen-sanders"]
 	path = implementations/karkkainen-sanders
 	url = https://github.com/anadon/Karkkainen-Sanders
 [submodule "implementations/libsuffixarray"]
 	path = implementations/libsuffixarray
 	url = https://github.com/anadon/libsuffixarray
+[submodule "implementations/qsufsort"]
+	path = implementations/qsufsort
+	url = https://github.com/anadon/QSufSort

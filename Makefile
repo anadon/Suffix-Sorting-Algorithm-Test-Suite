@@ -25,8 +25,9 @@ TEST_ROOT = $(abspath .)
 ##STANDARD BUILD########################################################
 
 all :
+	mkdir bin
 	cd implementations ; make
 
 clean :
 	cd implementations ; make clean
-	cd bin ; rm -rf *
+	rm -rf bin
