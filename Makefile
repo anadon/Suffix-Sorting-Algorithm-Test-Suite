@@ -20,17 +20,13 @@
 
 ##GLOBAL VARIABLES######################################################
 
-CFLAGS = -lsuffixarray -O3 -march=native -Wall
-
-SOURCE = timeTest-libsuffixarray.c
-
-EXEC = timeTest-libsuffixarray
-
+TEST_ROOT = $(abspath .)
 
 ##STANDARD BUILD########################################################
 
-all : $(SOURCE)
-	gcc $(CFLAGS) $(SOURCE) -o $(EXEC)
+all :
+	cd implementations ; make
 
 clean :
-	rm -f $(EXEC)
+	cd implementations ; make clean
+	cd bin ; rm -rf *
