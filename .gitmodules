@@ -11,3 +11,6 @@
 [submodule "implementations/libdivsufsort2"]
 	path = implementations/libdivsufsort2
 	url = https://github.com/y-256/libdivsufsort
+[submodule "implementations/archon4"]
+	path = implementations/archon4
+	url = https://github.com/anadon/archon4
