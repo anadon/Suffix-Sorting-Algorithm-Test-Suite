@@ -33,3 +33,6 @@
 [submodule "implementations/sais-lite-2.4.1"]
 	path = implementations/sais-lite-2.4.1
 	url = https://github.com/anadon/SA-IS
+[submodule "implementations/CPM03"]
+	path = implementations/CPM03
+	url = https://github.com/anadon/CPM03
