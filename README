@@ -2,4 +2,24 @@ Credit to Adrian Lopez for answering and user980411 for asking some
 timing code at 
 https://stackoverflow.com/questions/10192903/time-in-milliseconds
 
-Citations for algorithms are a work in progress.  At the time of this writing, the entry point to reconstruct all data is at https://github.com/y-256/libdivsufsort/blob/wiki/SACA_Benchmarks.md
+Citations for algorithms are a work in progress.  At the time of this 
+writing, the entry point to reconstruct all data is at 
+https://github.com/y-256/libdivsufsort/blob/wiki/SACA_Benchmarks.md
+
+BUILDING
+
+# make
+
+CLEANING
+
+# make clean
+
+TESTING
+
+# ./tests.sh
+
+By running tests.sh, it will automatically perform 100 tests of each 
+program over each test input file printing out programs and file names
+as they change, and run information is printed at the number of 
+executed instructions on the CPU and the peak memory usage in KB as 
+seperated columns, with each row being a distinct run.
