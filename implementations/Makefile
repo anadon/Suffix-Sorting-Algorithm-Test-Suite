@@ -27,7 +27,7 @@ CPM03_VAR = CPM03
 
 DUMMY = dummyProgram
 
-DIVUSORT = libdivsufsort2
+DIVSUFSORT = libdivsufsort2
 
 LIBSUFFIXARRAY = libsuffixarray
 
@@ -35,7 +35,7 @@ QSUFSORT = qsufsort
 
 SAIS = sais-lite-2.4.1
 
-all : ARCHON DUMMY LIBSUFFIXARRAY QSUFSORT SAIS # BPR2 CPM03_VAR DIVSUFSORT
+all : ARCHON DUMMY LIBSUFFIXARRAY QSUFSORT SAIS DIVSUFSORT # BPR2 CPM03_VAR
 	
 
 ARCHON :
@@ -70,11 +70,12 @@ DUMMY :
 	cd ../
 
 #Original build is broken
+#Currently fixed out of tree
 DIVSUFSORT :
 	cd $(DIVSUFSORT) ;\
-	git pull ;\
-	cmake CMakeLists.txt ;\
+	cmake -DCMAKE_BUILD_TYPE="RELEASE" -DCMAKE_INSTALL_PREIX="../install" ;\
 	make ;\
+	mv examples/suftest ../../bin/libdivsufsort ;\
 	cd ../
 
 LIBSUFFIXARRAY :
@@ -102,4 +103,3 @@ SAIS :
 
 clean :
 	for i in $$(ls -d */ ) ; do cd $$i ; make clean ; git checkout -- . ; git clean -f ; cd .. ; done
-	
