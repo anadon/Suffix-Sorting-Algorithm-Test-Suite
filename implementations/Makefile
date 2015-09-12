@@ -101,5 +101,9 @@ SAIS :
 	cd ../
 
 
-clean :
+clean : CLEAN_DIVSUFSORT
 	for i in $$(ls -d */ ) ; do cd $$i ; make clean ; git checkout -- . ; git clean -f ; cd .. ; done
+
+CLEAN_DIVSUFSORT :
+	cd "$DIVSUFSORT" ;\
+	find -iname '*cmake*' -not -name CMakeLists.txt -exec rm -rf {} \+
