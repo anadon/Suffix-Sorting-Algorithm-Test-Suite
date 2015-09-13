@@ -1,4 +1,10 @@
-for i in results/* ; do
-  for j in $i/* ; do
-  done
+
+
+cd results || exit
+
+mkdir graphs &> /dev/null
+for i in * ; do
+  cd "$i" || exit
+  gnuplot -e "set title '"$i"' ; set output '../graphs/"$i".svg'" -c ../../generateGraphs.gp
+  cd ..
 done
