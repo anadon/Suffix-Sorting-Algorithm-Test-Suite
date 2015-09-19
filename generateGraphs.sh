@@ -4,5 +4,8 @@ cd results || exit
 
 mkdir graphs &> /dev/null
 for i in * ; do
-  ./../makeAGraph.sh $i &
+  if [ $(basename "$i") == "graphs" ] ; then
+    continue;
+  fi
+  ( ./../makeAGraph.sh $(pwd)'/'"$i" ) &
 done

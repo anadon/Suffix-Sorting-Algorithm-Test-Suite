@@ -1,3 +1,5 @@
-cd "$1" || exit
-gnuplot -e "set title '"$1"' ; set term svg ; set output '../graphs/"$1".svg'" -c ../../generateGraphs.gp
-
+##echo $(pwd)
+cd "$1"
+echo $(pwd)
+FILE_NAME=$(basename "$1")
+gnuplot -e "set title \"$FILE_NAME\" ; set output \"../graphs/$FILE_NAME.svg\"" ../../makeAGraph.gp

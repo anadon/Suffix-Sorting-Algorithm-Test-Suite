@@ -30,4 +30,4 @@ all :
 
 clean :
 	cd implementations ; make clean
-	rm -rf bin
+	rm -rf bin results
